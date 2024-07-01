@@ -6,7 +6,8 @@ formElement.addEventListener("submit", (event) =>{
     let transaction={transactionDescription:transactionDescription,transactionPrice:transactionPrice};
     let transactionJson=JSON.stringify(transaction);
     //Mandar la transaccion al backend y guardarlos ahi
-    fetch('http://localhost:3000/transactions',{
+    //fetch('http://localhost:3000/transactions',{
+    fetch('http://public_html/jose/web/transactions',{
         method : 'Post', 
         body : transactionJson
     })
